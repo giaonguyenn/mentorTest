@@ -1,26 +1,47 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+	Semantic HTML is the use of specific naming conventions for your HTML elements to clearly describe what the content is to the browser and other developers. 
+	For example, <header>, <nav>, <footer> and <section> clearly denotes the different parts of your application and the content that will be enclosed within those tags.
+	<div>s and <span>s on the otherhand, are extremely vauge and can present as anything. You would have to declare them a class or an ID in order to give more context to the content within. 
 
 2. What is the box model?
+	The box model is a concept that will help you visualize elements in a layout. Every element is considered to have a box around it and the box model lets you define the space between and around each item. 
+
+	Imagine a navigation bar with a border wrapped around. The menu text and logo is the content on the navbar. Any space between the content and the border is the padding. After the border, any space between the navbar div and other elements is the margin. 
 
 3. What is the difference between IDs and Classes?
+	Classes and IDs differ in their specificity. The same class name can be applied to multiple elements that need the same styling. IDs are unique and cannot be assigned to multiple elements. 
 
 4. What does the z-index do?
+	Z-index allows you to place an importance on the order of layers for your elements. For example, if you want a background to show up behind another div, you would give the background a z-index of a negative number and the div a z-index of a positive number to ensure they show up as desired. The element with the higher z-index will always show up on top of the one with the lower z-index. 
 
 5. Summarize what the keyword 'this' is used for?
+	'this' is used as a pointer to objects and defines the context. You can see it used in a Constructor where it holds the value of the object. 
 
 6. What is a callback?
+	Callback is a function that is passed into another function as an argument where it is then executed. 
 
 7. What is a closure?
+	Closure is a function within a function. It is a function that returns a function. Closures is a way to override "garbage collection" process. It takes a snapshot or a copy of the parent function to preserve the code and keep the variables alive. It privatizes variables so it can be manipulated within other functions. It is a "poor man's object". 
 
 8. How does prototype work?
+	Prototype uses implicit binding to get data since they are mostly invoked from their object. You can use prototypes to add methods or properties to the object.
 
 9. What is MVC?
+	Model View Controller is a framework developed by Google to build properly architectured and maintainable web applications. 
+
+	Model stores the application data, view renders model for a client and controller updates model by reacting on client's actions. 
 
 10. What is the component lifecycle?
+	Every React component goes through a cycle of methods that lets the developer know when certain stages of the process occurs. There are four specific stages: mounting, update, unmounting, error handling. 
 
 11. What is REST?
+	REST allows you to make web requests using a simple URL. There are four methods:
+		1. GET: pull data
+		2. POST: update data
+		3. PUT: add data
+		4. DELETE: remove data
 
 12. Name three ways of getting data from the URL using express
 
@@ -30,12 +51,14 @@ name varchar(255),
 email varchar(255)
 )
 
+GET, POST and PUT?
+
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
--Get all users:
+-Get all users: SELECT * FROM users;
 
--Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+-Create a new user with the name of 'your name' and an email of 'fake@fake.com': INSERT INTO users (name, email) VALUES ('Giao', 'fake@fake.com');
 
--Update the newly created user's name to 'Bobby Boy':
+-Update the newly created user's name to 'Bobby Boy': UPDATE users SET name = 'Bobby Boy' WHERE name = 'Giao';
 
--Delete the newly updated user:
+-Delete the newly updated user: DELETE FROM users WHERE name='Giao';
